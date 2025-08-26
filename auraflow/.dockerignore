@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile.app
+docker-compose.yml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.env
+
+# Dependencies
+venv
+.venv
+env/
+ENV/
+*.egg-info/
+
+# Local data (mounted as volumes)
+db/
+ventures/
+
+# Documentation
+README.md
+
+# Testing
+tests/
+pytest.ini
+.pytest_cache/

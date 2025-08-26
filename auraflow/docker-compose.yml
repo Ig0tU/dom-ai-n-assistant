@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  auraflow_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    container_name: auraflow_app
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app
+      - ./ventures:/app/ventures
+      - ./db:/app/db
+    command: python main.py
+    restart: on-failure
+
+# A simple webhook listener could be added here later
+#  webhook_listener:
+#    ...
